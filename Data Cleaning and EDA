@@ -1,0 +1,5 @@
+df.describe().T.style.background_gradient(subset=['mean','std','50%','count'], cmap='RdPu')
+
+cprint("")
+
+df[['unitprice', 'quantity']].describe().T.style.background_gradient(subset = ['mean','std','50%','count'], cmap='RdPu')
