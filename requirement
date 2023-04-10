@@ -1,0 +1,69 @@
+# !pip install pyforest
+# 1-Import Libraies
+import numpy as np
+import pandas as pd 
+import seaborn as sns
+import matplotlib.pyplot as plt
+import scipy.stats as stats
+import datetime as dt
+%matplotlib inline
+import statsmodels.api as sm
+import statsmodels.formula.api as smf
+import missingno as msno 
+import plotly.express as px
+import plotly.graph_objects as go
+import datetime
+
+from sklearn.compose import make_column_transformer
+
+# Scaling
+from sklearn.preprocessing import scale 
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import PolynomialFeatures 
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.preprocessing import PowerTransformer 
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import RobustScaler
+
+# Modelling
+from sklearn.cluster import KMeans
+from sklearn.decomposition import PCA
+
+# Importing plotly and cufflinks in offline mode
+import cufflinks as cf
+import plotly.offline
+cf.go_offline()
+cf.set_config_file(offline=False, world_readable=True)
+import plotly.graph_objects as go
+
+# Ignore Warnings
+import warnings
+warnings.filterwarnings("ignore")
+warnings.warn("this will not show")
+
+# Figure&Display options
+plt.rcParams["figure.figsize"] = (16, 9)
+pd.set_option('max_colwidth',200)
+pd.set_option('display.max_rows', 1000)
+pd.set_option('display.max_columns', 200)
+pd.set_option('display.float_format', lambda x: '%.2f' % x)
+
+# !pip install termcolor
+import colorama
+from colorama import Fore, Style  # makes strings colored
+from termcolor import colored
+from termcolor import cprint
+
+import ipywidgets
+from ipywidgets import interact
+
+# !pip install -U pandas-profiling --user
+import pandas_profiling
+from pandas_profiling.report.presentation.flavours.html.templates import create_html_assets
+
+# !pip install wordcloud
+from wordcloud import WordCloud
+
+# !pip install squarify
+import squarify as sq
